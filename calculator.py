@@ -10,16 +10,21 @@ def interface():
         if choice=='9':
             return
         elif choice =='1':
-            hdl_result=HDL_driver()
-            print('Your HDL level is {}'.format(hdl_result))
+            HDL_driver()
+            #print('Your HDL level is {}'.format(hdl_result))
         elif choice =='2':
-            ldl_result=LDL_driver()
-            print('Your LDL level is {}'.format(ldl_result))
+            LDL_driver()
+            #print('Your LDL level is {}'.format(ldl_result))
         elif choice =='3':
-            chl_result=Cholesterol_driver()
-            print('Your Cholesterol level is {}'.format(chl_result))
+            Cholesterol_driver()
+            #print('Your Cholesterol level is {}'.format(chl_result))
         
         pass
+
+version = 2
+
+def print_me(in_string):
+    print(in_string)
 
 def Cholesterol_driver():
     # Get input
@@ -28,7 +33,8 @@ def Cholesterol_driver():
     #Check if HDL is normal
     results=check_Cholesterol(chl)
     #Outputs
-    return results
+    #return results
+    print('Your Cholesterol level is {}'.format(results))
     pass
 
 def check_Cholesterol(chl):
@@ -48,7 +54,8 @@ def LDL_driver():
     #Check if HDL is normal
     results=check_LDL(ldl)
     #Outputs
-    return results
+    #return results    
+    print('Your LDL level is {}'.format(results))
     pass
 
 def check_LDL(ldl):
@@ -62,8 +69,6 @@ def check_LDL(ldl):
         return 'normal'
     pass
 
-
-
 def HDL_driver():
     # Get input
     hdl=input('Insert HDL: ')
@@ -71,7 +76,8 @@ def HDL_driver():
     #Check if HDL is normal
     results=check_HDL(hdl)
     #Outputs
-    return results
+    print('Your HDL level is {}'.format(results))
+    #return results
     pass
 
 def check_HDL(hdl):
@@ -81,6 +87,8 @@ def check_HDL(hdl):
         return 'Borderline Low'
     else:
         return 'Low'
+    
     pass
 
-interface()
+if __name__=='__main__':
+    interface()
