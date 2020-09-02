@@ -11,14 +11,10 @@ def interface():
             return
         elif choice =='1':
             HDL_driver()
-            #print('Your HDL level is {}'.format(hdl_result))
         elif choice =='2':
             LDL_driver()
-            #print('Your LDL level is {}'.format(ldl_result))
         elif choice =='3':
             Cholesterol_driver()
-            #print('Your Cholesterol level is {}'.format(chl_result))
-        
         pass
 
 version = 2
