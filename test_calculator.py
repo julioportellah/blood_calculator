@@ -10,6 +10,7 @@ def test_check_HDL_(hdl_val,expected):
     result=check_HDL(hdl_val)
     assert result ==expected
 
+
 @pytest.mark.parametrize("ldl_val,expected",[
     (191,'very high'),
     (161,'high'),
@@ -19,6 +20,7 @@ def test_check_LDL(ldl_val,expected):
     from calculator import check_LDL
     result=check_LDL(ldl_val)
     assert result ==expected
+
 
 @pytest.mark.parametrize("chl_val,expected",[
     (199,'Normal'),
